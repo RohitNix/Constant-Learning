@@ -1,0 +1,168 @@
+<?php
+  if(isset($_REQUEST['submit'])){
+    include('connection.php');
+    $user_name = $_REQUEST['uname'];
+    $email = $_REQUEST['email'];
+    $phone = $_REQUEST['phone'];
+    $password = $_REQUEST['password'];
+    mysqli_query($c,"INSERT INTO persons (username,email,phone,password) VALUES ('$user','$email','$phone','$password')") or die(mysqli_error($c));
+
+  }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/css/bootstrap.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="custom2.css">
+  <title>Irctc Clone Landing page</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-1">
+        </div>
+          <div class="col-sm-10">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="row px-3 py-3">
+                <div class="col-sm-6 text-left ">
+                  <h3 class="form_heading">Sign up</h3>
+                  <form action="#" >
+                    <div class="form_group mt-4 " class="form_group">
+                      <img src="images/login_icons/man-user.png" style="height: 12px; width: 13px;">
+                      <input type="text" name="user_name" id="uname" value=""  placeholder="Username">
+                    </div>
+                    <p class="emsg" id="uerror"></p>
+                    <div class="form_group mt-4"class="form_group">
+                      <img src="images/login_icons/email.png" style="height: 12px; width: 13px;">
+                      <input type="email" name="user_name" id="email" value=""  placeholder="Your Email">
+                    </div>
+                    <p class="emsg" id="eerror"></p>
+                    <div class="form_group mt-4"class="form_group">
+                      <img src="images/login_icons/call.png" style="height: 12px; width: 13px;">
+                      <input type="number" name="phone" id="phone" value=""  placeholder="Phone">
+                    </div>
+                    <p class="emsg" id="perror"></p>
+                    <div class="form_group mt-4"class="form_group">
+                      <img src="images/login_icons/padlock.png" style="height: 12px; width: 13px;">
+                      <input type="password" name="password" id="password" value=""  placeholder="Password">
+                    </div>
+                    <p class="emsg" id="pserror"></p>
+                    <div class="form_group mt-4"class="form_group">
+                      <img src="images/login_icons/password.png" style="height: 12px; width: 13px;">
+                      <input type="password" name="cpassword" id="cpassword" value=""  placeholder="Confirm Password">
+                    </div>
+                    <p class="emsg" id="cpserror"></p>
+                     <a href="#login" class="btn" type="submit" >Register</a>
+                  </form>
+                </div>
+                <div class="col-sm-6 ">
+                  <img src="images/login_icons/form_card.jpg"class="img-fluid pt-5">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+      <script src="js/jquery.js"></script>
+      <script>
+        $(document).ready(function(){
+          $("#uname").blur(function(){
+            var regex =/^[a-zA-Z]([0-9a-zA-Z]){2,10}$/;
+            if(!$("#uname").val().match(regex)){
+              var msg="**invalid username.";
+              console.log("there is some issue with name");
+              $("#uerror").html(msg);
+            } else{
+                document.getElementById("uerror").innerHTML = "";
+                console.log("fixed !!");
+            }
+          });
+          $("#email").blur(function(){
+            var regex =/^([_\-\.0-9a-zA-z]+)@([_\-\.0-9a-zA-z]+)\.([a-zA-Z]){2,7}$/;
+            if(!$("#email").val().match(regex)){
+              var msg="**invalid email.";
+              $("#eerror").html(msg);
+            }else{
+              document.getElementById("eerror").innerHTML = "";
+            }
+          });
+          $("#phone").blur(function(){
+            var regex =/^([0-9]){10}$/;
+            if(!$("#phone").val().match(regex)){
+              var msg="**invalid phone.";
+              $("#perror").html(msg);
+            }else{
+              document.getElementById("perror").innerHTML = "";
+            }
+          });
+          $("#password").blur(function(){
+            var regex =/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+            if(!$("#password").val().match(regex)){
+              var msg="**invalid password.";
+              $("#pserror").html(msg);
+              alert("**Minimum eight characters, at least one letter, one number and one special character");
+            }else{
+              document.getElementById("pserror").innerHTML = "";
+            }
+          });
+          $("#cpassword").blur(function(){
+            if($("#cpassword").val() == $("#password").val()){
+              var msg="**password not matched.";
+              $("#cpserror").html(msg);
+            }else{
+              document.getElementById("cpserror").innerHTML = "";
+            }
+          });
+        });
+      </script>
+
+
+     <div class="container mt-5 " id="login">
+      <div class="row">
+        <div class="col-sm-1">
+        </div>
+          <div class="col-sm-10">
+            <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="row px-3 py-3">
+                
+                <div class="col-sm-6 ">
+                  <img src="images/login_icons/log_form4.jpg" class="img-fluid pt-5">
+                </div>
+
+                <div class="col-sm-6 text-left ">
+                  <h3 class="form_heading">Login</h3>
+                  <form action="#" >
+                    <div class="form_group mt-4 " class="form_group">
+                      <img src="images/login_icons/man-user.png" style="height: 12px; width: 13px;">
+                      <input type="text" name="" id="" value=""  placeholder="Username">
+                    </div>
+                    <div class="form_group mt-4"class="form_group">
+                      <img src="images/login_icons/padlock.png" style="height: 12px; width: 13px;">
+                      <input type="password" name="" id="" value=""  placeholder="Password">
+                    </div> 
+                     <a href="bootstrap2.html" class="btn">Login</a>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+  </body>
+  </html>

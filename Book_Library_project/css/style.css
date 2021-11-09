@@ -1,0 +1,98 @@
+/* Change Brand Font */
+.navbar-brand{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* Change Navigation Color */
+.navbar #myMenu .custom-nav .nav-item a {
+  color: #fff;
+}
+/*.navbar #myMenu .custom-nav .nav-item a:hover{
+  color: #F0AAB1;
+}
+*/
+/* Make Header Image Responsive */
+.back-image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+  border-radius: 0px;
+  margin-top: 72px;
+}
+
+/* Header Image Sub-Title */
+.st {
+  font-size: 24px;
+}
+
+/* Change Footer Social Icon Color */
+a {
+  color: #9bc472;
+}
+a:hover {
+  color: #9bc472;
+  text-decoration: none;
+}
+.services{
+  height: 127px;
+  width: 132px;
+}
+.features{
+  font-family: 'Merriweather',serif;
+}
+.add_book_form{
+  font-family: 'Merriweather',serif;
+}
+.form_design{
+font-family: 'Ubuntu', sans-serif;
+font-size: 13px;
+
+}
+.pagin{
+  color: white;
+    border-color: #9bc472;
+    background-color: #9bc472;
+}
+.btn-drp {
+    color: #fff;
+    border-color: #9bc472;
+    background-color: #9bc472;
+}
+.btn-drp:hover{
+   color:#9bc472;
+    border-color: #9bc472;
+    background-color: #fff;
+}
+.btn-drp:not(:disabled):not(.disabled).active, .btn-drp:not(:disabled):not(.disabled):active, .show>.btn-drp.dropdown-toggle {
+    color: #fff;
+    background-color:#9bc472 ;
+    border-color: #9bc472;
+}
+.btn-fav {
+    color: #fff;
+    border-color:#00e3a1 ;
+    background-color:#00e3a1 ;
+}
+.btn-fav.:hover{
+   color:#00e3a1;
+    border-color:#00e3a1 ;
+    background-color: #fff;
+}
+.account{
+   
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;    
+
+}
+.account .account_r .card a: {
+  background-color: black;
+  font-color: white;
+
+}
+#alert{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+}

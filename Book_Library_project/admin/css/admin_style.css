@@ -1,0 +1,49 @@
+/* Change Brand Font */
+.navbar-brand{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 23px;
+}
+
+/* Change Navigation Color */
+.navbar #myMenu .custom-nav .nav-item a {
+  color: #fff;
+}
+.table thead tr th{
+  font-size: 14px;
+}
+.table tbody tr th td{
+  font-size: 14px;
+}
+.navbar-text{
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+}
+.form_design{
+font-family: 'Ubuntu', sans-serif;
+font-size: 13px;
+}
+.list-group-item{
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgb(27 145 207);
+}
+.list-group-item .admin_sidebar{
+text-decoration: none;
+color: #1B91CF;
+font-family: 'Ubuntu', sans-serif;
+}
+.list-group-item .admin_sidebar:hover{
+text-decoration: none;
+color: #1B91CF;
+font-family: 'Ubuntu', sans-serif;
+}
+.user_info{
+  margin-bottom: -3px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.user_info_li{
+  padding-left: 6px;
+}

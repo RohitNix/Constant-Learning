@@ -1,0 +1,108 @@
+.nav-bg{
+	background-color: #213d77;
+}
+.img{
+	height: 70px;
+	width: 70px;
+}
+.navbar-brand{
+	font-size: 2em;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+}
+.banner{
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius:0;
+	min-height: 95vh;
+}
+.bannerbrand{
+        font-size: 3em;
+	  color: white;
+	font-weight: bold;
+}
+.services{
+	height:65px;
+	width: 65px;
+
+}
+.cardclip{
+	 height: 250px;
+}
+.formtext{
+	font-family: Body,Quicksand,sans-serif!important;
+	color: #2E5984;
+	font-weight: bold;
+}
+a:hover{
+	color: #528AAE;
+}
+.sponsers{
+     height: 30px;
+     width: 80px;
+     margin: 12px;
+}
+.footer{
+	color: #2c215d;
+}
+a{
+	color:#2c215d; 
+}
+a:hover{
+	color: #710193;
+}
+.services_text{
+	font-family: Body,Quicksand,sans-serif!important; 
+	font-color:black;
+	margin-top: 50px;
+}
+.div_first{
+	margin-top: 100px;
+}
+.card-title{
+   font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+
+}
+.card-text{
+	 font-family: 'Ubuntu', sans-serif;
+}
+
+.form_group{
+	
+	width:14rem;
+	border-bottom: 2px solid black;
+}
+input{
+	        border: none;
+            outline: none;
+            background: none;
+            color: black;
+           font-family: 'Ubuntu', sans-serif;
+            font-size: 14px;
+
+}
+.form_container{
+	margin-top: 7rem;
+}
+.form_heading{
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+	color: black;
+}
+.btn{
+         border:1px solid white;
+         border-radius: 4px;
+          background: #529fe3;
+          text-decoration: none;
+          color: white;
+          padding: 2px 20px;
+          text-align: center;
+          margin-top: 20px;
+          font-family: 'Ubuntu', sans-serif;
+	  }
+
+.emsg{
+	color: red;
+	font-family: 'Ubuntu', sans-serif;
+}
